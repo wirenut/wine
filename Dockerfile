@@ -12,3 +12,5 @@ RUN apt-key add winehq.key
 RUN echo 'deb https://dl.winehq.org/wine-builds/debian/ stretch main' >> /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install --install-recommends winehq-stable -y
+RUN mkdir /home/jenkins
+RUN chown -R jenkins:jenkins /home/jenkins
